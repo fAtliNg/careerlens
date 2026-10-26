@@ -1,0 +1,47 @@
+.chart {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.fill {
+  opacity: 0.85;
+  transform-origin: 50% 50%;
+  transform-box: view-box;
+  animation: grow 0.8s var(--ease-out) both;
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+}
+
+.outline {
+  fill: none;
+  stroke: var(--border-strong);
+}
+
+.cross {
+  stroke: var(--bg-raised);
+  stroke-width: 3;
+}
+
+.letter {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.label {
+  fill: var(--text-2);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.value {
+  fill: var(--text);
+  font-weight: 700;
+}

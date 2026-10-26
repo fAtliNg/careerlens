@@ -1,0 +1,116 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  background: var(--bg-raised);
+  box-shadow: var(--shadow);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out), border-color 0.2s;
+  animation: rise 0.6s var(--ease-out) both;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-strong);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.dots {
+  display: flex;
+}
+
+.dots span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-raised);
+  margin-right: -7px;
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+}
+
+.badges span {
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--step--2);
+  font-weight: 600;
+}
+
+.badgeIt {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.badgeDone {
+  background: color-mix(in srgb, var(--good) 14%, transparent);
+  color: var(--good);
+}
+
+.badgeProgress {
+  background: color-mix(in srgb, var(--neutral) 16%, transparent);
+  color: var(--neutral);
+}
+
+.category {
+  color: var(--text-3);
+  font-size: var(--step--1);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.title {
+  font-size: var(--step-2);
+  margin-bottom: 10px;
+}
+
+.tagline {
+  color: var(--text-2);
+  flex: 1;
+  margin-bottom: 24px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-3);
+  font-size: var(--step--1);
+}
+
+.arrow {
+  margin-left: auto;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--step-1);
+  transition: background-color 0.2s, color 0.2s, transform 0.35s var(--ease-out);
+}
+
+.card:hover .arrow {
+  background: var(--text);
+  color: var(--bg);
+  transform: translateX(3px);
+}
